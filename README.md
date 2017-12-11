@@ -6,6 +6,7 @@ To build React app that displays uplifting quotes with such features as filter a
 
 ### Steps Taken
 1. CRA and create folder structure
+2. Reconfig
 
 
 ### Lessons Learned/Challenges
