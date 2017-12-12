@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppContainer from './container/AppContainer';
+import AppContainer from './containers/AppContainer';
 import {applyMiddleware,createStore} from 'redux';
 import {Provider} from 'react-redux';
 import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
-import rootReducer from './reducers/root_reducer.js';
+import rootReducer from './redux/reducers/root_reducer.js';
 
 let logger = createLogger({
 	timestamp:true,
