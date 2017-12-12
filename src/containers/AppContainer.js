@@ -1,4 +1,4 @@
-import App from '../components/App.js';
+import App from '../components/App/App.js';
 import {connect} from 'react-redux';
 import getQuotes from '../redux/actions/get_quotes.js';
 
