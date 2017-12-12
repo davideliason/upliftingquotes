@@ -40,7 +40,7 @@ class App extends Component {
                 {quotes.map((quote, index) => {
                   return (
                     <li key={index} style={colorStyle} >
-                      {quote.quote} by {quote.author} ({quote.genre})
+                      {quote.quote}  -{quote.author} ({quote.genre})
                     </li>
                   );
                 })}
