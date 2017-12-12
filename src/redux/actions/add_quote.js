@@ -7,7 +7,7 @@ export default function addQuote(quote,author){
 			const quotesRef = database.ref('/quotes');
 			quotesRef.push({
 				quote,
-				author,
+				author
 			})
 			.then(() => {
 			    dispatch(addQuoteFulfilledAction())

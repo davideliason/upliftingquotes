@@ -8,7 +8,6 @@ import {createLogger} from 'redux-logger';
 import thunk from 'redux-thunk';
 import rootReducer from './redux/reducers/root_reducer.js';
 
-import addQuote from './redux/actions/add_quote.js';
 
 let logger = createLogger({
 	timestamp:true,
@@ -16,7 +15,6 @@ let logger = createLogger({
 });
 
 const store = createStore(rootReducer, {}, applyMiddleware(thunk,logger));
-store.dispatch(addQuote("hi","bob"))
 console.log(store.getState());
 
 ReactDOM.render(<Provider store={store}><AppContainer /></Provider>, document.getElementById('root'));

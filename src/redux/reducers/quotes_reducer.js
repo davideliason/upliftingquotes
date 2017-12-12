@@ -28,25 +28,33 @@ export default function quotesReducer(state={},action){
 			return newState;
 		}
 
-		case 'AddQuotesRequested': {
+		case 'AddQuoteRequested': {
 			return Object.assign({},state,{
 				inProgress: true,
 				error: false
 			});
 		}
 
-		case 'AddQuotesRejected': {
+		case 'AddQuoteRejected': {
 			return Object.assign({},state,{
 				inProgress: false,
 				error: true
 			});
 		}
 
-		case 'AddQuotesFulfilled': {
+		case 'AddQuoteFulfilled': {
 			return Object.assign({},state,{
 				inProgress: false,
 				error: false
 			})
+		}
+
+		case 'quoteAdded': {
+			const newState = Object.assign({}, state);
+      		newState.quotes = newState.quotes || [];
+      		newState.quotes = newState.quotes.slice();
+      		newState.quotes.push(action.quote);
+      		return newState;
 		}
 
 		default:

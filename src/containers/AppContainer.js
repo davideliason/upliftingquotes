@@ -2,6 +2,8 @@ import App from '../components/App/App.js';
 import {connect} from 'react-redux';
 import getQuotes from '../redux/actions/get_quotes.js';
 import addQuote from '../redux/actions/add_quote.js';
+import watchIfQuoteAdded from '../redux/actions/watch_if_quote_added.js';
+
 
 
 function mapStateToProps(state){
@@ -11,9 +13,11 @@ function mapStateToProps(state){
 }
 
 function mapDispatchToProps(dispatch){
+    watchIfQuoteAdded(dispatch);
+
 	return {
 		getQuotes : () => dispatch(getQuotes()),
-		addQuote  : (x,y) => dispatch(addQuote(x,y))
+		addQuote  : (quote,author) => dispatch(addQuote(quote,author))
 	}
 }
 

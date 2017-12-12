@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
-import AppButtonOne from './AppButtonOne.js';
 import Background from './Background.js';
 import BackgroundPic from './sunshine-and-clouds-background.jpg';
-import RandomQuote from '../RandomQuote/RandomQuote.js';
 
 var sectionStyle = {
   width: "100%",
@@ -21,7 +19,7 @@ const colorStyle = {
 
 
 class App extends Component {
-
+  
   constructor(){
     super();
     this.state={
@@ -30,21 +28,9 @@ class App extends Component {
     }
   }
 
-	 componentWillMount() {
+	 componentDidMount() {
    		 this.props.getQuotes(); // FB DB object set to redux
   	 }
-
-     andleOnChange = (e) => {
-    this.setState({
-      filter: e.target.value
-    })
-  }
-
-  handleOnChangeGenre = (e) => {
-    this.setState({
-      genre: e.target.value
-    })
-  }
 
   render() {
 	const {quotes} = this.props.quotes;
@@ -109,7 +95,6 @@ class App extends Component {
             </Col>
             <Col xs={3}></Col>
           </Row>
-          <AppButtonOne />
           <Background />
       </div>
     );
