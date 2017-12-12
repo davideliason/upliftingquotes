@@ -22,10 +22,29 @@ const colorStyle = {
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state={
+      quote : "",
+      author : ""
+    }
+  }
+
 	 componentWillMount() {
    		 this.props.getQuotes(); // FB DB object set to redux
-       this.props.addQuote("hello","world2");
   	 }
+
+     andleOnChange = (e) => {
+    this.setState({
+      filter: e.target.value
+    })
+  }
+
+  handleOnChangeGenre = (e) => {
+    this.setState({
+      genre: e.target.value
+    })
+  }
 
   render() {
 	const {quotes} = this.props.quotes;
@@ -47,6 +66,32 @@ class App extends Component {
              	<Col xs={2}></Col>
            </Row>
         </Jumbotron>
+         <Row>
+            <Col xs={3}></Col>
+            <Col xs={6}>
+                <input
+                  placeholder = "quote"
+                  type="text"
+                  value={this.state.quote}
+                  onChange={e => this.setState({ quote: e.target.value })}
+                />
+                <input
+                  type="text"
+                  placeholder = "author"
+                  value={this.state.author}
+                  onChange={e => this.setState({ author: e.target.value })}
+                />
+               
+                <button
+                  className="btn btn-primary"
+                  type="button"
+                  onClick={() => this.props.addQuote(this.state.quote,this.state.author)}
+                >
+                  Add Quote
+                </button>
+            </Col>
+            <Col xs={3}></Col>
+          </Row>
         <Row>
             <Col xs={3}></Col>
             <Col xs={6}>
