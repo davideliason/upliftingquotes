@@ -1,4 +1,4 @@
-import database from '../database.js';
+import database from '../constants/database.js';
 
 
 export default function addQuote(quote,author){
