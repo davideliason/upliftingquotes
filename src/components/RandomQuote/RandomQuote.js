@@ -2,33 +2,19 @@ import React, { Component } from 'react';
 // import './AppButtonOne.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
 const colorStyle = {
-	color: 'blue'
+	color: 'red'
 }
 
 
-class Background extends Component {
+class RandomQuote extends Component {
   constructor(){
     super();
     this.state = {
-      pictures: [],
       quotes: []
     };
   }
 
-	 componentWillMount() {
-      fetch('https://randomuser.me/api/?results=500')
-       .then(results => {
-         return results.json();
-       }).then(data => {
-        let pictures = data.results.map((pic) => {
-          return (
-              <div key={pic.results}>
-                <img src={pic.picture.medium} />
-              </div>
-            )
-        })
-          this.setState({pictures: pictures});
-       })
+	 componentDidMount() {
 
        fetch('https://random-quote-generator.herokuapp.com/api/quotes/')
        .then(results => {
@@ -41,7 +27,8 @@ class Background extends Component {
               </div>
             )
         })
-          this.setState({quotes: quotes});
+          this.setState({quotes: quotes,
+                      });
        })
   	 }
 
@@ -49,13 +36,13 @@ class Background extends Component {
 
     return (
       <div >
-        <p>Background</p>
+        <p>Quote</p>
         <div>
-          {this.state.quotes}
+          <h3>Look: {this.state.quotes} </h3>
         </div>
       </div>
     );
   }
 }
 
-export default Background;
+export default RandomQuote;
