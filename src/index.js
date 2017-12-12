@@ -14,6 +14,6 @@ let logger = createLogger({
 });
 
 const store = createStore(rootReducer, {}, applyMiddleware(thunk,logger));
-
+console.log(store.getState());
 
 ReactDOM.render(<Provider store={store}><AppContainer /></Provider>, document.getElementById('root'));
