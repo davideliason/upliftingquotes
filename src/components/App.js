@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
+const colorStyle = {
+	color: 'green'
+}
 
 
 class App extends Component {
@@ -10,6 +13,8 @@ class App extends Component {
   	 }
 
   render() {
+	const {quotes} = this.props.quotes;
+
     return (
       <div className="App">
         <Jumbotron>
@@ -17,7 +22,7 @@ class App extends Component {
         	<Row>
              	<Col xs={2}></Col>
              	<Col xs={2}>
-                	<a href="https://github.com/davideliason/favorite-books-react-redux-firebase">Repo</a>
+                	<a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
             	 </Col>
 
              	<Col xs={2}></Col>
@@ -27,6 +32,23 @@ class App extends Component {
              	<Col xs={2}></Col>
            </Row>
         </Jumbotron>
+        <Row>
+            <Col xs={3}></Col>
+            <Col xs={6}>
+               {quotes && quotes.length > 0 ? (
+              <ul>
+                {quotes.map((quote, index) => {
+                  return (
+                    <li key={index} style={colorStyle} >
+                      {quote.quote} by {quote.author} ({quote.genre})
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : null}
+            </Col>
+            <Col xs={3}></Col>
+          </Row>
       </div>
     );
   }
