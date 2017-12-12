@@ -22,8 +22,9 @@ const colorStyle = {
 
 class App extends Component {
 
-	 componentDidMount() {
+	 componentWillMount() {
    		 this.props.getQuotes(); // FB DB object set to redux
+       this.props.addQuote("hello","world2");
   	 }
 
   render() {
