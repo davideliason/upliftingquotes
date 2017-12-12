@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
 import AppButtonOne from './AppButtonOne.js';
+import Background from './Background.js';
 const colorStyle = {
 	color: 'green'
 }
@@ -51,6 +52,7 @@ class App extends Component {
             <Col xs={3}></Col>
           </Row>
           <AppButtonOne />
+          <Background />
       </div>
     );
   }
