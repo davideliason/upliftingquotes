@@ -26,3 +26,7 @@ Successfully created a React app which uses Redux to populate state data to chil
 
 [AWS S3 Deployment](http://upliftingquotes.s3-website-us-west-2.amazonaws.com/)
 ![InspirationalQuotes](./InspirationalQuotes.png)
+
+To run the Dockerized version:
+1. Clone repo
+2. $ docker run -it -v ${PWD}:/usr/src/app -p 3000:3000 --rm upliftinuotes

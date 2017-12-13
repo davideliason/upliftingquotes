@@ -27,7 +27,7 @@ class App extends Component {
        <Jumbotron>
           <Background />
       </Jumbotron>
-      <PageHeader>Inspirational Quotes<small>  because life can be hard</small></PageHeader>
+      <PageHeader>Inspirational Quotes  <small>  because life can be hard</small></PageHeader>
       <Grid>
         <Row>
               <Col xs={20} />
