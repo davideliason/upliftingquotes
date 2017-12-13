@@ -35,11 +35,13 @@ class App extends Component {
     return (
       <div style = { sectionStyle } >
       <Grid>
-         <Row> 
-              <Col xs={5}></Col>
-              <Col xs={10}>Inspirational Quotes</Col>
-              <Col xs={5}></Col>
-         </Row>
+        <Row>
+              <Col xs={7}></Col>
+              <Col xs={6}>
+                 <h3>Inspirational Quotes </h3>
+              </Col>
+              <Col xs={7}></Col>
+        </Row>
          <Row>
              	<Col xs={4}></Col>
              	<Col xs={4}>
