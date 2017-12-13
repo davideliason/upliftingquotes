@@ -5,16 +5,6 @@ import Background from './Background.js';
 import BackgroundPic from './sunshine-and-clouds-background.jpg';
 
 
-const colorStyle = {
-	color: 'blue'
-}
-
-const sectionStyle = {
-  backgroundColor : "yellow",
-  height : "1000px"
-}
-
-
 class App extends Component {
   
   constructor(){
@@ -33,27 +23,26 @@ class App extends Component {
 	const {quotes} = this.props.quotes;
 
     return (
-      <div style = { sectionStyle } >
+
+      <div>
+       <Jumbotron>
+          <h3>Inspirational Quotes</h3>
+      </Jumbotron>
       <Grid>
         <Row>
-              <Col xs={7}></Col>
-              <Col xs={6}>
-                 <h3>Inspirational Quotes </h3>
+              <Col xs={1}></Col>
+              <Col xs={4}>
               </Col>
-              <Col xs={7}></Col>
+              <Col xs={5}></Col>
+              <Col xs={3}>
+                  <a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
+              </Col>
+               <Col xs={3}>
+                  <a href="https://github.com/davideliason/davideliason.github.io">Github Portfolio</a>
+               </Col>
+              <Col xs={4}></Col>
         </Row>
-         <Row>
-             	<Col xs={4}></Col>
-             	<Col xs={4}>
-                	<a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
-            	 </Col>
-
-             	<Col xs={4}></Col>
-                <Col xs={4}>
-              	  <a href="https://github.com/davideliason/davideliason.github.io">Github Portfolio</a>
-             	 </Col>
-             	<Col xs={4}></Col>
-        </Row>
+         
         <Row>
             <Col xs={5}></Col>
             <Col xs={10}>
@@ -87,7 +76,7 @@ class App extends Component {
               <ul>
                 {quotes.map((quote, index) => {
                   return (
-                    <li key={index} style={colorStyle} >
+                    <li key={index}>
                       {quote.quote}  -{quote.author} ({quote.genre})
                     </li>
                   );
