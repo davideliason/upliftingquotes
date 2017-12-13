@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Grid,Row,Col,Jumbotron,PageHeader} from 'react-bootstrap';
+import {Grid,Row,Col,Jumbotron,PageHeader,ListGroup,ListGroupItem} from 'react-bootstrap';
 import Background from './Background.js';
 import BackgroundPic from './sunshine-and-clouds-background.jpg';
 
@@ -26,7 +26,7 @@ class App extends Component {
 
       <div>
        <Jumbotron>
-          <h3></h3>
+          <Background />
       </Jumbotron>
       <PageHeader>Inspirational Quotes<small>  because life can be hard</small></PageHeader>
       <Grid>
@@ -37,9 +37,10 @@ class App extends Component {
               <Col xs={5}></Col>
               <Col xs={3}>
                   <a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
+                 
+                  <a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
               </Col>
                <Col xs={3}>
-                  <a href="https://github.com/davideliason/davideliason.github.io">Github Portfolio</a>
                </Col>
               <Col xs={4}></Col>
         </Row>
@@ -89,7 +90,6 @@ class App extends Component {
         </Row>
       </Grid>
 
-        <Background />
 
       </div>
     );
