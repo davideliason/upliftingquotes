@@ -37,7 +37,7 @@ class Background extends Component {
         let quotes = data.map((quote) => {
           return (
               <div key={quote.results}>
-               {quote.quote}
+               {quote.quote} -{quote.author}
               </div>
             )
         })
