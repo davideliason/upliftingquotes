@@ -43,7 +43,7 @@ class App extends Component {
                 {quotes.map((quote, index) => {
                   return (
                     <li key={index}>
-                      {quote.quote}  -{quote.author} ({quote.genre})
+                      {quote.quote}  -{quote.author} {quote.genre}
                     </li>
                   );
                 })}
