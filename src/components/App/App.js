@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Grid,Row,Col,Jumbotron} from 'react-bootstrap';
+import {Grid,Row,Col,Jumbotron,PageHeader} from 'react-bootstrap';
 import Background from './Background.js';
 import BackgroundPic from './sunshine-and-clouds-background.jpg';
 
@@ -26,8 +26,9 @@ class App extends Component {
 
       <div>
        <Jumbotron>
-          <h3>Inspirational Quotes</h3>
+          <h3></h3>
       </Jumbotron>
+      <PageHeader>Inspirational Quotes<small>  because life can be hard</small></PageHeader>
       <Grid>
         <Row>
               <Col xs={1}></Col>
