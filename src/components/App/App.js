@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Row,Col,Jumbotron} from 'react-bootstrap';
+import {Grid,Row,Col,Jumbotron} from 'react-bootstrap';
 import Background from './Background.js';
 import BackgroundPic from './sunshine-and-clouds-background.jpg';
 
-var sectionStyle = {
-  width: "100%",
-  height: "1000px",
-  backgroundImage: "url(" + BackgroundPic + ")",
-  backgroundPosition: "center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover"
-};
 
 const colorStyle = {
-	color: 'green'
+	color: 'blue'
+}
+
+const sectionStyle = {
+  backgroundColor : "yellow",
+  height : "1000px"
 }
 
 
@@ -37,22 +34,27 @@ class App extends Component {
 
     return (
       <div style = { sectionStyle } >
-          <h3>Inspirational Quotes</h3>
-        	<Row>
-             	<Col xs={2}></Col>
-             	<Col xs={2}>
+      <Grid>
+         <Row> 
+              <Col xs={5}></Col>
+              <Col xs={10}>Inspirational Quotes</Col>
+              <Col xs={5}></Col>
+         </Row>
+         <Row>
+             	<Col xs={4}></Col>
+             	<Col xs={4}>
                 	<a href="https://github.com/davideliason/upliftingquotes/commits/master">Repo</a>
             	 </Col>
 
-             	<Col xs={2}></Col>
-                <Col xs={2}>
+             	<Col xs={4}></Col>
+                <Col xs={4}>
               	  <a href="https://github.com/davideliason/davideliason.github.io">Github Portfolio</a>
              	 </Col>
-             	<Col xs={2}></Col>
-           </Row>
+             	<Col xs={4}></Col>
+        </Row>
         <Row>
-            <Col xs={3}></Col>
-            <Col xs={6}>
+            <Col xs={5}></Col>
+            <Col xs={10}>
                 <input
                   placeholder = "quote"
                   type="text"
@@ -74,11 +76,11 @@ class App extends Component {
                   Add Quote
                 </button>
             </Col>
-            <Col xs={3}></Col>
+            <Col xs={5}></Col>
         </Row>
         <Row>
-            <Col xs={3}></Col>
-            <Col xs={6}>
+            <Col xs={5}></Col>
+            <Col xs={10}>
                {quotes && quotes.length > 0 ? (
               <ul>
                 {quotes.map((quote, index) => {
@@ -91,16 +93,11 @@ class App extends Component {
               </ul>
             ) : null}
             </Col>
-            <Col xs={3}></Col>
-        </Row>
-
-        <Row>
             <Col xs={5}></Col>
-            <Col xs={4}>
-               <Background />
-            </Col>
-            <Col xs={3}></Col>
         </Row>
+      </Grid>
+
+        <Background />
 
       </div>
     );

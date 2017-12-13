@@ -48,11 +48,15 @@ class Background extends Component {
   render() {
 
     return (
-      <div >
-        <div>
-          {this.state.quotes[Math.floor((Math.random() * this.state.quotes.length) + 1)]}
-        </div>
-      </div>
+        <Row>
+            <Col xs={3}></Col>
+            <Col xs={6}>
+               <div>
+                {this.state.quotes[Math.floor((Math.random() * this.state.quotes.length) + 1)]}
+              </div>
+            </Col>
+            <Col xs={3}></Col>
+        </Row>
     );
   }
 }
