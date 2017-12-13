@@ -51,7 +51,7 @@ class Background extends Component {
       <div >
         <p>Background</p>
         <div>
-          {this.state.quotes}
+          {this.state.quotes[this.state.quotes.length-1]}
         </div>
       </div>
     );
