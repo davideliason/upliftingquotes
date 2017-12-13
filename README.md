@@ -1,6 +1,8 @@
 # Uplifting Quotes
 ## [David Eliason](http://www.davethemaker.com)
 
+[AWS S3 Deployment](http://upliftingquotes.s3-website-us-west-2.amazonaws.com/)
+
 ### Concept
 To build React app that displays uplifting quotes with such features as filter and adding user quotes. Technology used incluses Redux, Heroku deployment, Docker container, AWS S3 and CloudFront deployment.
 
@@ -22,4 +24,5 @@ Successfully created a React app which uses Redux to populate state data to chil
 [David Eliason](https://www.linkedin.com/in/davideliason/)
 [Portfolio](https://github.com/davideliason/davideliason.github.io)
 
+[AWS S3 Deployment](http://upliftingquotes.s3-website-us-west-2.amazonaws.com/)
 ![InspirationalQuotes](./InspirationalQuotes.png)
