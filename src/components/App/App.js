@@ -6,7 +6,7 @@ import BackgroundPic from './sunshine-and-clouds-background.jpg';
 
 var sectionStyle = {
   width: "100%",
-  height: "100%",
+  height: "1000px",
   backgroundImage: "url(" + BackgroundPic + ")",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -37,7 +37,6 @@ class App extends Component {
 
     return (
       <div style = { sectionStyle } >
-        <Jumbotron>
           <h3>Inspirational Quotes</h3>
         	<Row>
              	<Col xs={2}></Col>
@@ -51,8 +50,7 @@ class App extends Component {
              	 </Col>
              	<Col xs={2}></Col>
            </Row>
-        </Jumbotron>
-         <Row>
+        <Row>
             <Col xs={3}></Col>
             <Col xs={6}>
                 <input
@@ -77,7 +75,7 @@ class App extends Component {
                 </button>
             </Col>
             <Col xs={3}></Col>
-          </Row>
+        </Row>
         <Row>
             <Col xs={3}></Col>
             <Col xs={6}>
@@ -94,8 +92,16 @@ class App extends Component {
             ) : null}
             </Col>
             <Col xs={3}></Col>
-          </Row>
-          <Background />
+        </Row>
+
+        <Row>
+            <Col xs={5}></Col>
+            <Col xs={4}>
+               <Background />
+            </Col>
+            <Col xs={3}></Col>
+        </Row>
+
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import './AppButtonOne.css';
 import {Row,Col,Jumbotron} from 'react-bootstrap';
 const colorStyle = {
-	color: 'blue'
+	color: 'green'
 }
 
 
@@ -49,7 +49,6 @@ class Background extends Component {
 
     return (
       <div >
-        <p>Background</p>
         <div>
           {this.state.quotes[Math.floor((Math.random() * this.state.quotes.length) + 1)]}
         </div>
