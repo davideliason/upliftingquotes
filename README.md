@@ -21,3 +21,5 @@ Successfully created a React app which uses Redux to populate state data to chil
 
 [David Eliason](https://www.linkedin.com/in/davideliason/)
 [Portfolio](https://github.com/davideliason/davideliason.github.io)
+
+![InspirationalQuotes](./InspirationalQuotes.png)
