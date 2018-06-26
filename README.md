@@ -1,7 +1,6 @@
 # Uplifting Quotes
 ## [David Eliason](http://www.davethemaker.com)
 
-[AWS S3 Deployment](http://upliftingquotes.s3-website-us-west-2.amazonaws.com/)
 
 ### Concept
 To build React app that displays uplifting quotes with such features as filter and adding user quotes. Technology used includes React, Redux, Firebase for data persistence, Heroku deployment, Docker container, AWS S3 and CloudFront deployment, Bootstrap styling.
@@ -18,11 +17,16 @@ To build React app that displays uplifting quotes with such features as filter a
 ### Lessons Learned/Challenges
 Need to make sure to add Bootstrap css CDN link in root file or else changes will not show ;) Working with Fetch and an API was something I hadn't worked with in awhile. Working with Bootstrap within the React world also provided some learning opportunities.
 
+Previously, an AWS S3 bucket was used to host, as well as using a Docker container, and these features can re-initiated again.
+
 ### Conclusion 
 Successfully created a React app which uses Redux to populate state data to child components. Use of an API to randomly generate a quote. Input fields to allow user to add a quote which will be added to Firebase Database for persistence.
 
 [David Eliason](https://www.linkedin.com/in/davideliason/)
 [Portfolio](https://davideliason.github.io/portfolio/
+
+[Heroku](https://upliftingquotes.herokuapp.com/)
+[Github](https://github.com/davideliason/upliftingquotes)
 
 [AWS S3 Deployment](http://upliftingquotes.s3-website-us-west-2.amazonaws.com/)
 ![InspirationalQuotes](./InspirationalQuotes.png)
